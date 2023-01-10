@@ -1,5 +1,4 @@
 import entry.Person;
-import vo.TestListVO;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -21,8 +20,8 @@ public class StreamTest {
         people.add(p2);
         people.add(p3);
         people.add(p4);
-        TestListVO<Person> personTestListVO = new TestListVO<>();
-        personTestListVO.setList(people);
 
+        long count = people.stream().distinct().count();
+        System.out.println(count);
     }
 }
